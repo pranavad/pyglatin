@@ -34,16 +34,18 @@ def pyglatin():
             if word[-1] == "." or word[-1] == ";" or word[-1] == "," or word[-1] == "'" or word[-1] == "\"" or word[-1] == "!" or word[-1] == "?":
                 end_mark = word[-1]
                 word = word[0:-2]
-        letters = "aeiouAEIOU".split()
-        for i in letters:
-            if first_letter == i:
+        vowel = False
+        for i in "aeiouAEIOU":
+
+            if i == first_letter:
                 word = start_mark + first_letter + word + "yay" + end_mark
                 lis.append(word)
-                break
-            elif i != first_letter:
-                word = start_mark + word + first_letter + "ay" + end_mark
-                lis.append(word)
-                break
+                vowel = True
+
+
+        if vowel == False:
+            word = start_mark + word + first_letter + "ay" + end_mark
+            lis.append(word)
     final_doc = " ".join(lis)
     output_file_write.write(final_doc)
 def de_pyg():
@@ -58,25 +60,26 @@ def de_pyg():
         output_file = askopenfilename()
         output_file_write = open(output_file,"w")
         print("Translated to " + output_file)
-    for i in str_list:
+    for word in str_list:
         end_mark = ""
         start_mark = ""
+        if word[0] == "\"" or word[0] == "'":
+                start_mark = word[0]
+                word = word[1:]
+
         if word[-1] == "\'" or word[-1]== ":" or word[-1]== ";" or word[-1]== "\"" or word[-1]== "." or word[-1]== "," or word[-1]== "'":
-            end_mark = i[-1]
-            i = word[:-3]
+            end_mark = word[-1]
+            word = word[:-3]
         else:
             word = word[:-2]
-        if len(i) > 1:
-            first_letter = i[-1]
+        if len(word) > 1:
+            first_letter = word[-1]
             word = word[:-1]
 
-            if word[0] == "\"" or word[0] == "'":
-                start_mark = i[0]
-                word = word[1:]
 
             lis.append(start_mark + first_letter + word + end_mark)
         else:
-            lis.append(i)
+            lis.append(word)
     final_doc = " ".join(lis)
     output_file_write.write(final_doc)
 
