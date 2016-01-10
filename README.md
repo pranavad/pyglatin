@@ -5,13 +5,15 @@ Python script to convert text in a .txt file to Pig Latin and back
 
 Pig Latin is a language game in which words in English are altered. The objective is to conceal the meaning of the words from others not familiar with the rules. The reference to Latin is a deliberate misnomer, as it is simply a form of jargon, used only for its English connotations as a strange and foreign-sounding language. (source: Wikipedia)
 
-``This is not a true representation of Pig Latin, but it is close enough.``
+~~This is not a true representation of Pig Latin, but it is close enough.~~
 
 The script translates the files with the vanilla Pig Latin rules. The reverse translation adds the letter y to all words starting with y. 
+
 For example - 
 
 Enjoy > Enjoyyay
-Enjoyyay = yEnjoy
+
+Enjoyyay > yEnjoy
 
 # How to use this 
 
@@ -24,6 +26,7 @@ Enjoyyay = yEnjoy
 # Requirements
 
 1. Python 3.4.4 (install here - www.python.org)
+
 
 Enjoy!
 (Or Enjoyyay!)
