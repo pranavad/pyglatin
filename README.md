@@ -7,7 +7,7 @@ Pig Latin is a language game in which words in English are altered. The objectiv
 
 ~~This is not a true representation of Pig Latin, but it is close enough.~~
 
-The script translates the files with the vanilla Pig Latin rules. The reverse translation adds the letter y to all words starting with y. 
+The script translates the files with the vanilla Pig Latin rules. The reverse translation adds the letter y to all words starting with vowels. 
 
 For example - 
 
@@ -25,7 +25,7 @@ Enjoyyay > yEnjoy
 
 # Requirements
 
-1. Python 3.4.4 (install here - www.python.org)
+1. Python 3.4.4 (<a href="www.python.org"> Find it here </a>)
 
 
 Enjoy!
